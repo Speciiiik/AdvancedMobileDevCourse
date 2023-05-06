@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".CustomViewTesterFragment">
+
+    <com.example.advancedmobiledevcourse.CustomTemperatureView
+        android:id="@+id/customtemperatureview_tester"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/button_change_temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_change_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="#1f4f0a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spin_kit2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_change_temperature"
+        app:layout_constraintVertical_bias="0.668" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit2"
+        style="@style/SpinKitView.Large.ThreeBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="#56a832"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spin_kit3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spin_kit"
+        app:layout_constraintTop_toBottomOf="@+id/button_change_temperature"
+        app:layout_constraintVertical_bias="0.668" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit3"
+        style="@style/SpinKitView.Large.RotatingPlane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="#fcba03"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spin_kit2"
+        app:layout_constraintTop_toBottomOf="@+id/button_change_temperature"
+        app:layout_constraintVertical_bias="0.668" />
+
+    <com.github.anastr.speedviewlib.DeluxeSpeedView
+        android:id="@+id/speedView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/spin_kit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_change_temperature"
+        app:layout_constraintVertical_bias="0.5"
+        app:sv_withTremble="false" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
